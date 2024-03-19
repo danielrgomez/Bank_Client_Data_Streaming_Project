@@ -49,7 +49,7 @@ async def post_bank_client(bankclient:BankClient):
         print(json_as_string)
 
         #Sends the json string via the produce_kafka_string function
-        #produce_kafka_string(json_as_string)
+        produce_kafka_string(json_as_string)
 
         #Encodes the bank client into a json and sends a status code of 201 back to the client
         return JSONResponse(content=json_as_string, status_code=201)
@@ -60,7 +60,7 @@ async def post_bank_client(bankclient:BankClient):
 
 def produce_kafka_string(json_as_string):
         # Create producer
-        producer = KafkaProducer(bootstrap_servers='kafka:9092',acks=1)
+        producer = KafkaProducer(bootstrap_servers='localhost:9093',acks=1)
         
         # Writes the string as bytes because Kafka needs it this way
         producer.send('ingestion-topic', bytes(json_as_string, 'utf-8'))
