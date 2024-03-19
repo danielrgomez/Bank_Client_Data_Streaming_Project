@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "8b82bc4b-a6a8-417b-8d44-003ebb1c6ca0",
+		"name": "BankClients-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31104186"
+	},
+	"item": [
+		{
+			"name": "Post Bank Clients",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Id\": 0,\r\n  \"age\": 0,\r\n  \"job\": \"string\",\r\n  \"marital\": \"string\",\r\n  \"education\": \"string\",\r\n  \"default\": \"string\",\r\n  \"balance\": 0,\r\n  \"housing\": \"string\",\r\n  \"contact\": \"string\",\r\n  \"day\": 0,\r\n  \"month\": \"string\",\r\n  \"duration\": 0,\r\n  \"campaign\": 0,\r\n  \"pdays\": 0,\r\n  \"previous\": 0,\r\n  \"poutcome\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/post_bank_clients",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"post_bank_clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Bank Clients - Wrong Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Id\": \"wrong value should be integer\",\r\n  \"age\": 0,\r\n  \"job\": \"string\",\r\n  \"marital\": \"string\",\r\n  \"education\": \"string\",\r\n  \"default\": \"string\",\r\n  \"balance\": 0,\r\n  \"housing\": \"string\",\r\n  \"contact\": \"string\",\r\n  \"day\": 0,\r\n  \"month\": \"string\",\r\n  \"duration\": 0,\r\n  \"campaign\": 0,\r\n  \"pdays\": 0,\r\n  \"previous\": 0,\r\n  \"poutcome\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/post_bank_clients",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"post_bank_clients"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
