@@ -14,6 +14,6 @@ df['json'] = df.to_json(orient='records',lines=True).splitlines()
 dfjson = df['json']
 print(dfjson)
 
-#Daves the json output as a text file in the same file path
+#Saves the json output as a text file in the same file path
 np.savetxt(r'./output.txt',dfjson.values,fmt='%s')
 
